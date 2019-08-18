@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="1077.0" style="-fx-background-radius: 5px;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymsystem.controller.InstructorsViewController">
+   <children>
+      <Label layoutX="75.0" layoutY="90.0" prefHeight="37.0" prefWidth="160.0" text="Instructor ID" textFill="#0d0c0c">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="127.0" prefHeight="37.0" prefWidth="160.0" text="Instructor Name" textFill="#0d0c0c">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="164.0" prefHeight="37.0" prefWidth="160.0" text="Instructor NIC" textFill="#0d0c0c">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="231.0" prefHeight="37.0" prefWidth="160.0" text="E-mail" textFill="#0d0c0c">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="268.0" prefHeight="37.0" prefWidth="160.0" text="Tel.No" textFill="#0d0c0c">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_insId" focusColor="BLACK" layoutX="235.0" layoutY="90.0" prefHeight="25.0" prefWidth="250.0" unFocusColor="#110f0f" />
+      <JFXTextField fx:id="txt_InsName" focusColor="BLACK" labelFloat="true" layoutX="235.0" layoutY="127.0" prefHeight="25.0" prefWidth="250.0" unFocusColor="#110f0f" />
+      <JFXTextField fx:id="txt_InsNic" focusColor="BLACK" labelFloat="true" layoutX="235.0" layoutY="164.0" prefHeight="25.0" prefWidth="250.0" unFocusColor="#110f0f" />
+      <JFXTextField fx:id="txt_InsEmail" focusColor="BLACK" labelFloat="true" layoutX="235.0" layoutY="231.0" prefHeight="25.0" prefWidth="250.0" unFocusColor="#110f0f" />
+      <JFXTextField fx:id="txt_InsTp" focusColor="BLACK" labelFloat="true" layoutX="235.0" layoutY="268.0" prefHeight="25.0" prefWidth="250.0" unFocusColor="#110f0f" />
+      <JFXButton layoutX="542.0" layoutY="105.0" onAction="#onaction_Add" prefHeight="35.0" prefWidth="160.0" stylesheets="@../css/Instructor_css.css" text="Register">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton1" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton layoutX="542.0" layoutY="152.0" onAction="#onaction_Update" prefHeight="35.0" prefWidth="160.0" stylesheets="@../css/Instructor_css.css" text="Update">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton2" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton layoutX="542.0" layoutY="199.0" onAction="#onaction_Remove" prefHeight="35.0" prefWidth="160.0" stylesheets="@../css/Instructor_css.css" text="Remove">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton3" />
+         </styleClass>
+      </JFXButton>
+      <AnchorPane layoutX="734.0" layoutY="104.0" prefHeight="174.0" prefWidth="325.0" styleClass="search" stylesheets="@../css/Instructor_css.css">
+         <children>
+            <Label layoutX="10.0" layoutY="2.0" prefHeight="32.0" prefWidth="148.0" text="Search Instructor" textFill="#2200ff">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_SearchId" layoutX="44.0" layoutY="55.0" onAction="#onaction_SearchID" prefHeight="25.0" prefWidth="205.0" promptText="ID" />
+            <ImageView fitHeight="32.0" fitWidth="36.0" layoutX="258.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/icons8_Search_96px.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txt_SearchNic" layoutX="44.0" layoutY="101.0" onAction="#onaction_SearchNIC" prefHeight="25.0" prefWidth="205.0" promptText="NIC" />
+            <ImageView fitHeight="32.0" fitWidth="36.0" layoutX="261.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/icons8_Search_96px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="5.0" layoutY="4.0" prefHeight="47.0" prefWidth="1067.0" style="-fx-background-color: gray;">
+         <children>
+            <Label layoutX="454.0" layoutY="6.0" prefHeight="35.0" prefWidth="195.0" text="INSTRUCTORS" textFill="WHITE">
+               <font>
+                  <Font name="Monospaced Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="table_Instructors" layoutX="70.0" layoutY="335.0" onMouseClicked="#onaction_Clicked" prefHeight="254.0" prefWidth="998.0">
+        <columns>
+          <TableColumn prefWidth="133.0" text="ID" />
+          <TableColumn minWidth="0.0" prefWidth="163.0" text="Name" />
+            <TableColumn minWidth="0.0" prefWidth="164.0" text="NIC" />
+            <TableColumn minWidth="0.0" prefWidth="171.0" text="Address" />
+            <TableColumn minWidth="0.0" prefWidth="178.0" text="Email" />
+            <TableColumn minWidth="0.0" prefWidth="186.0" text="Tel.No" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="542.0" layoutY="243.0" onAction="#onaction_Clear" prefHeight="35.0" prefWidth="160.0" stylesheets="@../css/Member_css.css" text="Clear">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton4" />
+         </styleClass>
+      </JFXButton>
+      <Label layoutX="75.0" layoutY="198.0" prefHeight="37.0" prefWidth="160.0" text="Instructor Address" textFill="#0d0c0c">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_InsAddress" focusColor="BLACK" labelFloat="true" layoutX="235.0" layoutY="198.0" prefHeight="25.0" prefWidth="250.0" unFocusColor="#110f0f" />
+   </children>
+</AnchorPane>

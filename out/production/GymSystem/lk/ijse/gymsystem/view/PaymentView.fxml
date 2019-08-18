@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="payment_pane" prefHeight="613.0" prefWidth="1077.0" stylesheets="@../css/Measurment_css.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymsystem.controller.PaymentViewController">
+   <children>
+      <Label layoutX="74.0" layoutY="156.0" prefHeight="40.0" prefWidth="173.0" text="Customer ID" textFill="#141212">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_CustomerId" layoutX="247.0" layoutY="154.0" onAction="#request2" prefHeight="25.0" prefWidth="292.0" unFocusColor="#110f0f" />
+      <Label layoutX="74.0" layoutY="198.0" prefHeight="40.0" prefWidth="173.0" text="Customer Name" textFill="#141212">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_customerName" layoutX="247.0" layoutY="196.0" onAction="#request3" prefHeight="25.0" prefWidth="292.0" unFocusColor="#110f0f" />
+      <Label layoutX="74.0" layoutY="114.0" prefHeight="40.0" prefWidth="173.0" text="Payment ID" textFill="#141212">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_PaymentId" layoutX="247.0" layoutY="112.0" onAction="#request1" prefHeight="25.0" prefWidth="292.0" unFocusColor="#110f0f" />
+      <Label layoutX="74.0" layoutY="238.0" prefHeight="40.0" prefWidth="173.0" text="Date" textFill="#141212">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="318.0" prefHeight="40.0" prefWidth="173.0" text="Payment Method" textFill="#141212">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXRadioButton layoutX="231.0" layoutY="330.0" text="Cash" textFill="#0d0b0b">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton accessibleRole="IMAGE_VIEW" layoutX="333.0" layoutY="330.0" text="Credit Card" textFill="#0d0b0b">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXRadioButton>
+      <Label layoutX="76.0" layoutY="360.0" prefHeight="40.0" prefWidth="173.0" text="Amount" textFill="#141212">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_amount" layoutX="249.0" layoutY="358.0" onAction="#request6" prefHeight="25.0" prefWidth="138.0" unFocusColor="#110f0f" />
+      <Label layoutX="74.0" layoutY="278.0" prefHeight="40.0" prefWidth="173.0" text="Duration" textFill="#141212">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_Diuration" layoutX="247.0" layoutY="276.0" onAction="#request5" prefHeight="25.0" prefWidth="138.0" unFocusColor="#110f0f" />
+      <JFXButton layoutX="75.0" layoutY="529.0" onAction="#onaction_Proceed" prefHeight="35.0" prefWidth="165.0" stylesheets="@../css/Payment_css.css" text="Procced" textFill="#222121">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton1" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton layoutX="290.0" layoutY="529.0" onAction="#onaction_Print" prefHeight="35.0" prefWidth="165.0" stylesheets="@../css/Payment_css.css" text="Print Bill" textFill="#222121">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton2" />
+         </styleClass>
+      </JFXButton>
+      <AnchorPane layoutX="4.0" layoutY="4.0" prefHeight="47.0" prefWidth="1067.0" style="-fx-background-color: gray;">
+         <children>
+            <Label layoutX="471.0" layoutY="6.0" prefHeight="35.0" prefWidth="195.0" text="PAYMENT" textFill="WHITE">
+               <font>
+                  <Font name="Monospaced Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="605.0" layoutY="117.0" prefHeight="40.0" prefWidth="116.0" text="Description" textFill="#141212">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txt_Desc" layoutX="713.0" layoutY="123.0" prefHeight="177.0" prefWidth="343.0" />
+      <JFXTextField fx:id="txt_Date" layoutX="247.0" layoutY="239.0" onAction="#request4" prefHeight="25.0" prefWidth="138.0" unFocusColor="#110f0f" />
+      <TableView fx:id="tbl_Payment" layoutX="639.0" layoutY="356.0" onMouseClicked="#onaction_Clicked" prefHeight="230.0" prefWidth="418.0">
+        <columns>
+          <TableColumn prefWidth="123.0" text="Payment ID" />
+          <TableColumn prefWidth="140.0" text="Date" />
+            <TableColumn prefWidth="152.0" text="Customer ID" />
+        </columns>
+      </TableView>
+      <Label layoutX="76.0" layoutY="395.0" prefHeight="40.0" prefWidth="173.0" text="Cash" textFill="#141212">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_cash" layoutX="249.0" layoutY="393.0" onAction="#calculate" prefHeight="25.0" prefWidth="138.0" unFocusColor="#110f0f" />
+      <Label layoutX="76.0" layoutY="431.0" prefHeight="40.0" prefWidth="173.0" text="Balance" textFill="#141212">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_balance" layoutX="249.0" layoutY="429.0" prefHeight="25.0" prefWidth="138.0" unFocusColor="#110f0f" />
+   </children>
+</AnchorPane>

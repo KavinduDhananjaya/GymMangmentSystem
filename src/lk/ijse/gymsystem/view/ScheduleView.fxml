@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="1077.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymsystem.controller.ScheduleViewController">
+   <children>
+      <AnchorPane layoutX="5.0" layoutY="6.0" prefHeight="47.0" prefWidth="1067.0" style="-fx-background-color: gray;">
+         <children>
+            <Label layoutX="462.0" layoutY="6.0" prefHeight="35.0" prefWidth="195.0" text="SCHEDULE" textFill="WHITE">
+               <font>
+                  <Font name="Monospaced Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="75.0" layoutY="99.0" prefHeight="37.0" prefWidth="160.0" text="Schedule ID" textFill="#0a0909">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_Scheduled" focusColor="BLACK" labelFloat="true" layoutX="220.0" layoutY="97.0" prefHeight="25.0" prefWidth="160.0" unFocusColor="#0d0d0d" />
+      <Label layoutX="75.0" layoutY="141.0" prefHeight="37.0" prefWidth="160.0" text="Measurment ID" textFill="#0a0909">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_MeasurmentId" focusColor="BLACK" labelFloat="true" layoutX="220.0" layoutY="139.0" prefHeight="25.0" prefWidth="160.0" unFocusColor="#0d0d0d" />
+      <Label layoutX="75.0" layoutY="229.0" prefHeight="37.0" prefWidth="160.0" text="Instructor Name" textFill="#0a0909">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_InstructorName" focusColor="BLACK" labelFloat="true" layoutX="220.0" layoutY="227.0" prefHeight="25.0" prefWidth="207.0" unFocusColor="#0d0d0d" />
+      <Label layoutX="75.0" layoutY="273.0" prefHeight="37.0" prefWidth="160.0" text="Member ID" textFill="#0a0909">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_MemberId" focusColor="BLACK" labelFloat="true" layoutX="220.0" layoutY="271.0" prefHeight="25.0" prefWidth="160.0" unFocusColor="#0d0d0d" />
+      <Label layoutX="75.0" layoutY="184.0" prefHeight="37.0" prefWidth="160.0" text="Instructor ID" textFill="#0a0909">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_InstructorId" focusColor="BLACK" labelFloat="true" layoutX="220.0" layoutY="182.0" prefHeight="25.0" prefWidth="160.0" unFocusColor="#0d0d0d" />
+      <TextArea fx:id="txt_Discription" layoutX="75.0" layoutY="352.0" prefHeight="237.0" prefWidth="397.0" />
+      <Label layoutX="75.0" layoutY="316.0" prefHeight="37.0" prefWidth="160.0" text="Discription" textFill="#0a0909">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="728.0" layoutY="109.0" prefHeight="140.0" prefWidth="335.0" styleClass="search" stylesheets="@../css/Member_css.css">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="36.0" layoutX="267.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/icons8_Search_96px.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txt_SearchId" layoutX="54.0" layoutY="62.0" prefHeight="25.0" prefWidth="207.0" />
+            <Label layoutX="10.0" layoutY="7.0" prefHeight="32.0" prefWidth="147.0" text="Search Schedule" textFill="#2200fc">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btn_Register" layoutX="507.0" layoutY="116.0" onAction="#onaction_Register" prefHeight="25.0" prefWidth="160.0" stylesheets="@../css/Member_css.css" text="Add">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton1" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton fx:id="btn_Update" layoutX="507.0" layoutY="160.0" onAction="#onaction_Update" prefHeight="25.0" prefWidth="160.0" stylesheets="@../css/Member_css.css" text="Update">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton2" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton fx:id="btn_remove" layoutX="507.0" layoutY="207.0" onAction="#onaction_Remove" prefHeight="25.0" prefWidth="160.0" stylesheets="@../css/Member_css.css" text="Remove">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton3" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton fx:id="btn_Clear" layoutX="507.0" layoutY="252.0" onAction="#onaction_Clear" prefHeight="25.0" prefWidth="160.0" stylesheets="@../css/Member_css.css" text="Clear">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton4" />
+         </styleClass>
+      </JFXButton>
+      <TableView layoutX="728.0" layoutY="335.0" prefHeight="260.0" prefWidth="335.0">
+        <columns>
+          <TableColumn prefWidth="160.0" text="Member ID" />
+          <TableColumn prefWidth="173.0" text="Schedule ID" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

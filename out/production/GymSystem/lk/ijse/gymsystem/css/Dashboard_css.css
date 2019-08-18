@@ -1,0 +1,38 @@
+.colortext{
+
+    -fx-background-color: rgba(253, 253, 253, 0.25);
+
+}
+.color{
+    -fx-background-color: rgba(113, 113, 113, 0.51);
+
+}
+
+.divcolor{
+-fx-border-radius: 20px;
+}
+.searchcolor{
+
+    -fx-background-color: rgba(136, 136, 136, 0.53);
+}
+.panecolor{
+    -fx-background-color: rgba(105, 105, 105, 0.36);
+}
+
+
+.div{
+    -fx-background-color: linear-gradient(#555555 0%, #7f7f7f 100%);
+    -fx-background-radius: 5px;
+
+
+}
+
+.button{
+
+
+}
+.div2{
+    -fx-background-color: linear-gradient(#444444 0%, #555555 100%);
+}
+
+

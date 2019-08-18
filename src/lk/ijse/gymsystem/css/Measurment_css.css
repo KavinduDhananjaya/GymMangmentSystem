@@ -1,0 +1,35 @@
+.anchorpane{
+
+    -fx-background-color: rgba(2, 2, 2, 0.48);
+}
+
+.button1{
+    -fx-background-color: white, white;
+    -fx-background-radius: 16.4, 15;
+    -fx-background-insets: -1.4, 0;
+    -fx-border-radius: 15;
+    -fx-border-width: 2;
+    -fx-border-color: dimgrey;
+    -fx-padding: 0;
+    -fx-font-size: 0;
+}
+
+.closebutton1:hover {
+    -fx-effect: innershadow(gaussian, rgba(33, 202, 14, 0.77), 15, 0, 0, 0);
+}
+.closebutton2:hover {
+    -fx-effect: innershadow(gaussian, blue, 15, 0, 0, 0);
+}
+.closebutton3:hover {
+    -fx-effect: innershadow(gaussian, #ff030c, 15, 0, 0, 0);
+}
+.closebutton4:hover {
+    -fx-effect: innershadow(gaussian, #fdff0f, 15, 0, 0, 0);
+}
+
+.search{
+
+    -fx-background-color: rgba(144, 144, 144, 0.82);
+}
+
+

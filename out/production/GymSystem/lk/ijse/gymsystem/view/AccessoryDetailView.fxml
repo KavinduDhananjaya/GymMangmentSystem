@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="613.0" prefWidth="1077.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymsystem.controller.AccessoryDetailViewController">
+   <children>
+      <AnchorPane layoutX="5.0" layoutY="5.0" prefHeight="47.0" prefWidth="1067.0" style="-fx-background-color: gray;">
+         <children>
+            <Label layoutX="404.0" layoutY="6.0" prefHeight="35.0" prefWidth="310.0" text="Accessory Details" textFill="WHITE">
+               <font>
+                  <Font name="Monospaced Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="85.0" layoutY="123.0" prefHeight="37.0" prefWidth="160.0" text="Member ID" textFill="#0a0909">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_MemberId" focusColor="BLACK" labelFloat="true" layoutX="230.0" layoutY="122.0" prefHeight="25.0" prefWidth="160.0" unFocusColor="#0d0d0d" />
+      <Label layoutX="85.0" layoutY="174.0" prefHeight="37.0" prefWidth="160.0" text="Member Name" textFill="#0a0909">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_Name" focusColor="BLACK" labelFloat="true" layoutX="230.0" layoutY="172.0" prefHeight="25.0" prefWidth="160.0" unFocusColor="#0d0d0d" />
+      <Label layoutX="85.0" layoutY="229.0" prefHeight="37.0" prefWidth="160.0" text="Accessory ID" textFill="#0a0909">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_AccessryId" focusColor="BLACK" labelFloat="true" layoutX="230.0" layoutY="227.0" prefHeight="25.0" prefWidth="160.0" unFocusColor="#0d0d0d" />
+      <Label layoutX="85.0" layoutY="280.0" prefHeight="37.0" prefWidth="160.0" text="Accessory Type" textFill="#0a0909">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_AccessoryType" focusColor="BLACK" labelFloat="true" layoutX="230.0" layoutY="278.0" prefHeight="25.0" prefWidth="160.0" unFocusColor="#0d0d0d" />
+      <JFXButton fx:id="btn_Register" layoutX="495.0" layoutY="135.0" onAction="#onaction_Register" prefHeight="25.0" prefWidth="160.0" stylesheets="@../css/Member_css.css" text="Add">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton1" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton fx:id="btn_Update" layoutX="495.0" layoutY="179.0" onAction="#onaction_Update" prefHeight="25.0" prefWidth="160.0" stylesheets="@../css/Member_css.css" text="Update">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton2" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton fx:id="btn_remove" layoutX="495.0" layoutY="226.0" onAction="#onaction_Remove" prefHeight="25.0" prefWidth="160.0" stylesheets="@../css/Member_css.css" text="Remove">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton3" />
+         </styleClass>
+      </JFXButton>
+      <AnchorPane layoutX="728.0" layoutY="115.0" prefHeight="464.0" prefWidth="335.0" styleClass="search" stylesheets="@../css/Member_css.css">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="36.0" layoutX="267.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/icons8_Search_96px.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txt_SearchId" layoutX="54.0" layoutY="62.0" prefHeight="25.0" prefWidth="207.0" />
+            <Label layoutX="10.0" layoutY="7.0" prefHeight="32.0" prefWidth="147.0" text="Search Accessories" textFill="#2200fc">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tbl_Accessory" layoutX="23.0" layoutY="132.0" prefHeight="315.0" prefWidth="296.0">
+              <columns>
+                <TableColumn prefWidth="294.0" text="Users" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

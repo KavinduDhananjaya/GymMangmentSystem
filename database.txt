@@ -1,0 +1,110 @@
+ 
+create database GYM_MANAGMENT;
+
+use GYM_MANAGMENT;
+
+create table CUSTOMER(
+CustomerId varchar(50) not null,
+CustomerName varchar(50) not null,
+CustomerAddress varchar(50) not null,
+CustomerEmail varchar(50) not null,
+CustomerTel varchar(50) not null,
+constraint primary key(CustomerId)
+);
+
+
+
+create table PAYMENT(
+PaymentId varchar(50) not null,
+CustomerId varchar(50) not null,
+PaymentDate varchar(50) not null,
+PaymentAmount decimal(10,2) not null,
+Discription varchar(50),
+Constraint primary key(PaymentId),
+Constraint foreign key(CustomerId) references Customer(customerId) on delete cascade on update cascade
+);
+
+
+
+create table ACCESSORIES(
+AccessoryType varchar(50) not null,
+AccessoryId varchar(50) not null,
+AccessoryBrand varchar(50) not null,
+Date varchar(50) not null,
+Constraint primary key(AccessoryId)
+);
+
+
+
+create table Attendance(
+AttendanceId varchar(50) not null,
+Date varchar(50) not null,
+ArrivalTime varchar(50) not null,
+DepartureTime varchar(50) not null,
+constraint primary key(AttendanceId)
+);
+
+
+
+
+create table Measurment(
+MeasurmentId  varchar(50) not null,
+Date varchar(50) not null,
+Height int not null,
+Weight int not null,
+Cheast int not null,
+Waist int not null,
+Arm int not null,
+Calf int not null,
+Constraint primary key(MeasurmentId)
+);
+
+
+
+create table INSTRUCTORS(
+
+InstructorId varchar(50) not null,
+InstructorName varchar(50) not null,
+InstructorNic varchar(50) not null,
+InstructorAddress varchar(50) not null,
+InstructorEmail varchar(50) not null,
+InstructorTp varchar(50) not null,
+Constraint primary key(InstructorId)
+
+);
+
+
+create table SHEDULE(
+
+SheduleId varchar(50) not null,
+MeasurmentId varchar(50) not null,
+InstructorId varchar(50) not null,
+CustomerId varchar(50) not null,
+Discription varchar(50) not null,
+constraint primary key(SheduleId),
+constraint foreign key(MeasurmentId) references Measurment(MeasurmentId),
+constraint foreign key(CustomerId) references Customer(CustomerId),
+constraint foreign key(InstructorId) references Instructors(InstructorId) 
+);.
+
+
+create table ATTENDANCEDETAIL(
+ScheduleId varchar(50) not null,
+AttendanceId varchae(50) not null
+);
+
+
+create table ACCESSORYDETAILS(
+CustomerId varchar(50) not null,
+AccessoryId varchar(50) not null,
+MemberName varchar(50) not null,
+AccessoryType varchar(50) not null,
+constraint foreign key(CustomerId) references Customer(CustomerId),
+constraint foreign key(AccessoryId) references Accessories(AccessoryId)
+);
+
+
+
+
+ 
+

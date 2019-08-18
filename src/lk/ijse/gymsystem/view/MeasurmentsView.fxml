@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="1077.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymsystem.controller.MeasurmentViewController">
+   <children>
+      <Label layoutX="93.0" layoutY="114.0" prefHeight="40.0" prefWidth="173.0" text="Customer ID" textFill="#171313">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="157.0" prefHeight="40.0" prefWidth="173.0" text="Customer Name" textFill="#171313">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="288.0" prefHeight="40.0" prefWidth="173.0" text="Height" textFill="#171313">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="333.0" prefHeight="40.0" prefWidth="173.0" text="Weight" textFill="#171313">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="381.0" prefHeight="40.0" prefWidth="173.0" text="Chest" textFill="#171313">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="478.0" prefHeight="40.0" prefWidth="173.0" text="Arm" textFill="#171313">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="431.0" prefHeight="40.0" prefWidth="173.0" text="Waist" textFill="#171313">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_CustomerId" focusColor="BLACK" layoutX="253.0" layoutY="112.0" prefHeight="25.0" prefWidth="292.0" unFocusColor="#0d0b0b" />
+      <JFXTextField fx:id="txt_CustomerName" focusColor="BLACK" layoutX="252.0" layoutY="158.0" prefHeight="25.0" prefWidth="292.0" unFocusColor="#0d0b0b" />
+      <JFXTextField fx:id="txt_Height" focusColor="BLACK" layoutX="250.0" layoutY="290.0" prefHeight="25.0" prefWidth="165.0" promptText="                                         cm" unFocusColor="#0d0b0b" />
+      <JFXTextField fx:id="txt_Weight" focusColor="BLACK" layoutX="250.0" layoutY="338.0" prefHeight="25.0" prefWidth="165.0" promptText="                                          kg" unFocusColor="#0d0b0b" />
+      <JFXTextField fx:id="txt_Chest" focusColor="BLACK" layoutX="250.0" layoutY="386.0" prefHeight="25.0" prefWidth="165.0" promptText="                                         cm" unFocusColor="#0d0b0b" />
+      <JFXTextField fx:id="txt_Waist" focusColor="BLACK" layoutX="250.0" layoutY="436.0" prefHeight="25.0" prefWidth="165.0" promptText="                                         cm" unFocusColor="#0d0b0b" />
+      <JFXTextField fx:id="txt_Arm" focusColor="BLACK" layoutX="250.0" layoutY="483.0" prefHeight="25.0" prefWidth="165.0" promptText="                                         cm" unFocusColor="#0d0b0b" />
+      <Label layoutX="93.0" layoutY="200.0" prefHeight="40.0" prefWidth="173.0" text="Measurment ID" textFill="#171313">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_MeasurmentId" focusColor="BLACK" layoutX="251.0" layoutY="201.0" prefHeight="25.0" prefWidth="292.0" unFocusColor="#0d0b0b" />
+      <Label layoutX="93.0" layoutY="531.0" prefHeight="33.0" prefWidth="173.0" text="Calf" textFill="#171313">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_Calf" focusColor="BLACK" layoutX="250.0" layoutY="531.0" prefHeight="25.0" prefWidth="165.0" promptText="                                         cm" unFocusColor="#0d0b0b" />
+      <Label layoutX="94.0" layoutY="245.0" prefHeight="40.0" prefWidth="67.0" text="Date" textFill="#141111">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="661.0" layoutY="127.0" onAction="#onaction_ADD" prefHeight="35.0" prefWidth="165.0" stylesheets="@../css/Measurment_css.css" text="Add">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton1" />
+         </styleClass>
+      </JFXButton>
+      <AnchorPane layoutX="4.0" layoutY="4.0" prefHeight="47.0" prefWidth="1067.0" style="-fx-background-color: gray;">
+         <children>
+            <Label layoutX="454.0" layoutY="6.0" prefHeight="35.0" prefWidth="195.0" text="MEASURMENT" textFill="WHITE">
+               <font>
+                  <Font name="Monospaced Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="661.0" layoutY="184.0" onAction="#onaction_Update" prefHeight="35.0" prefWidth="165.0" stylesheets="@../css/Measurment_css.css" text="Update">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton1" />
+         </styleClass>
+      </JFXButton>
+      <TableView fx:id="table_Measurment" layoutX="447.0" layoutY="268.0" onMouseClicked="#onaction_Clicked" prefHeight="290.0" prefWidth="621.0">
+        <columns>
+          <TableColumn prefWidth="102.0" text="Name" />
+          <TableColumn prefWidth="95.0" text="Date" />
+            <TableColumn prefWidth="71.0" text="Height" />
+            <TableColumn prefWidth="70.0" text="Weight" />
+            <TableColumn prefWidth="69.0" text="Chest" />
+            <TableColumn prefWidth="68.0" text="Waist" />
+            <TableColumn prefWidth="72.0" text="Arm" />
+            <TableColumn prefWidth="72.0" text="Calf" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txt_Date" focusColor="BLACK" layoutX="251.0" layoutY="245.0" prefHeight="25.0" prefWidth="165.0" unFocusColor="#0d0b0b" />
+      <JFXButton layoutX="879.0" layoutY="185.0" onAction="#onaction_Delete" prefHeight="35.0" prefWidth="165.0" stylesheets="@../css/Measurment_css.css" text="Delete">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton3" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton layoutX="877.0" layoutY="128.0" onAction="#onaction_Clear" prefHeight="35.0" prefWidth="165.0" stylesheets="@../css/Measurment_css.css" text="Clear">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton4" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton layoutX="447.0" layoutY="564.0" prefHeight="35.0" prefWidth="67.0" style="-fx-background-color: red;" text="Print" textFill="#f2eded" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="613.0" prefWidth="1077.0" style="-fx-background-radius: 5px;" stylesheets="@../css/Member_css.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymsystem.controller.MemberViewController">
+   <children>
+      <Label layoutX="65.0" layoutY="80.0" prefHeight="37.0" prefWidth="160.0" text="Customer ID" textFill="#0a0909">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="117.0" prefHeight="37.0" prefWidth="160.0" text="Customer Name" textFill="#0a0909">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="154.0" prefHeight="37.0" prefWidth="160.0" text="Customer Address" textFill="#0a0909">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="191.0" prefHeight="37.0" prefWidth="160.0" text="E-mail" textFill="#0a0909">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="228.0" prefHeight="37.0" prefWidth="160.0" text="Tel.No" textFill="#0a0909">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_CustId" focusColor="BLACK" labelFloat="true" layoutX="225.0" layoutY="80.0" prefHeight="25.0" prefWidth="250.0" unFocusColor="#0d0d0d" />
+      <JFXTextField fx:id="txt_CustName" focusColor="BLACK" labelFloat="true" layoutX="225.0" layoutY="117.0" prefHeight="25.0" prefWidth="250.0" unFocusColor="#0d0d0d" />
+      <JFXTextField fx:id="txt_CustAddress" focusColor="BLACK" labelFloat="true" layoutX="225.0" layoutY="154.0" prefHeight="25.0" prefWidth="250.0" unFocusColor="#0d0d0d" />
+      <JFXTextField fx:id="txt_Email" focusColor="BLACK" labelFloat="true" layoutX="225.0" layoutY="191.0" prefHeight="25.0" prefWidth="250.0" unFocusColor="#0d0d0d" />
+      <JFXTextField fx:id="txt_Tel" focusColor="BLACK" labelFloat="true" layoutX="225.0" layoutY="228.0" prefHeight="25.0" prefWidth="250.0" unFocusColor="#0d0d0d" />
+      <JFXButton fx:id="btn_Register" layoutX="532.0" layoutY="105.0" onAction="#onaction_Register" prefHeight="25.0" prefWidth="160.0" stylesheets="@../css/Member_css.css" text="Register">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton1" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton fx:id="btn_Update" layoutX="532.0" layoutY="149.0" onAction="#onaction_Update" prefHeight="25.0" prefWidth="160.0" stylesheets="@../css/Member_css.css" text="Update">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton2" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton fx:id="btn_remove" layoutX="532.0" layoutY="196.0" onAction="#onaction_Remove" prefHeight="25.0" prefWidth="160.0" stylesheets="@../css/Member_css.css" text="Remove">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton3" />
+         </styleClass>
+      </JFXButton>
+      <JFXMasonryPane layoutX="808.0" layoutY="154.0" />
+      <AnchorPane layoutX="744.0" layoutY="101.0" prefHeight="135.0" prefWidth="312.0" styleClass="search">
+         <children>
+            <JFXTextField fx:id="txt_searchId" layoutX="38.0" layoutY="65.0" onAction="#onaction_SearchID" prefHeight="25.0" prefWidth="204.0" style="-fx-background-color: white;" />
+            <Label layoutX="12.0" layoutY="4.0" prefHeight="32.0" prefWidth="147.0" text="Search Customer" textFill="#2200fc">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="36.0" layoutX="251.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/icons8_Search_96px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="4.0" layoutY="4.0" prefHeight="47.0" prefWidth="1067.0" style="-fx-background-color: gray;">
+         <children>
+            <Label layoutX="454.0" layoutY="6.0" prefHeight="35.0" prefWidth="195.0" text="CUSTOMER" textFill="WHITE">
+               <font>
+                  <Font name="Monospaced Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="65.0" layoutY="261.0" prefHeight="37.0" prefWidth="160.0" text="Gender" textFill="#0a0909">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXRadioButton fx:id="radio1" layoutX="211.0" layoutY="271.0" text="Male" />
+      <JFXRadioButton fx:id="radio2" layoutX="309.0" layoutY="271.0" text="Female" />
+      <TableView fx:id="table_Customer" layoutX="57.0" layoutY="335.0" onMouseClicked="#onaction_Clicked" prefHeight="225.0" prefWidth="1001.0">
+        <columns>
+          <TableColumn prefWidth="150.0" text="ID" />
+          <TableColumn prefWidth="209.0" text="NAME" />
+            <TableColumn prefWidth="196.0" text="ADDRESS" />
+            <TableColumn prefWidth="254.0" text="EMAIL" />
+            <TableColumn minWidth="0.0" prefWidth="189.0" text="TEL" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btn_Clear" layoutX="532.0" layoutY="241.0" onAction="#onaction_Clear" prefHeight="25.0" prefWidth="160.0" stylesheets="@../css/Member_css.css" text="Clear">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton4" />
+         </styleClass>
+      </JFXButton>
+   </children>
+</AnchorPane>

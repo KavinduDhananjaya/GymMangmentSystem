@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="att_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="1077.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymsystem.controller.AttendanceViewController">
+   <children>
+      <Label layoutX="92.0" layoutY="140.0" prefHeight="40.0" prefWidth="173.0" text="Customer ID" textFill="#0a0808">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="182.0" prefHeight="40.0" prefWidth="173.0" text="Customer Name" textFill="#0d0b0b">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_CustomerId" focusColor="BLACK" layoutX="235.0" layoutY="140.0" onAction="#request2" prefHeight="25.0" prefWidth="292.0" unFocusColor="#140f0f" />
+      <JFXTextField fx:id="txt_CustomerName" focusColor="BLACK" layoutX="235.0" layoutY="182.0" onAction="#request3" prefHeight="25.0" prefWidth="292.0" unFocusColor="#140f0f" />
+      <AnchorPane layoutX="5.0" layoutY="6.0" prefHeight="47.0" prefWidth="1067.0" style="-fx-background-color: gray;">
+         <children>
+            <Label layoutX="454.0" layoutY="6.0" prefHeight="35.0" prefWidth="195.0" text="ATTENDANCE" textFill="WHITE">
+               <font>
+                  <Font name="Monospaced Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="92.0" layoutY="269.0" prefHeight="40.0" prefWidth="173.0" text="Arrival Time" textFill="#0d0b0b">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="311.0" prefHeight="40.0" prefWidth="173.0" text="Departure Time" textFill="#0d0b0b">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_ArrivalTime" focusColor="BLACK" layoutX="235.0" layoutY="268.0" onAction="#request5" prefHeight="25.0" prefWidth="156.0" unFocusColor="#140f0f" />
+      <JFXTextField fx:id="txt_DepartureTime" focusColor="BLACK" layoutX="235.0" layoutY="310.0" prefHeight="25.0" prefWidth="156.0" unFocusColor="#140f0f" />
+      <TableView fx:id="tbl_Attendance" layoutX="92.0" layoutY="375.0" onMouseClicked="#onaction_Clicked" prefHeight="224.0" prefWidth="874.0" stylesheets="@../css/Attendace_css.css">
+        <columns>
+          <TableColumn prefWidth="148.0" text="ID" />
+          <TableColumn prefWidth="174.0" text="Name" />
+            <TableColumn prefWidth="183.0" text="Date" />
+            <TableColumn prefWidth="183.0" text="Arrival Time" />
+            <TableColumn prefWidth="183.0" text="Departure Time" />
+        </columns>
+      </TableView>
+      <Label layoutX="91.0" layoutY="101.0" prefHeight="40.0" prefWidth="173.0" text="Attendance ID" textFill="#0a0808">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_Id" focusColor="BLACK" layoutX="235.0" layoutY="102.0" onAction="#request1" prefHeight="25.0" prefWidth="292.0" unFocusColor="#140f0f" />
+      <Label layoutX="92.0" layoutY="226.0" prefHeight="40.0" prefWidth="173.0" text="Date" textFill="#0d0b0b">
+         <font>
+            <Font name="Serif Regular" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_Date" focusColor="BLACK" layoutX="235.0" layoutY="227.0" onAction="#request4" prefHeight="25.0" prefWidth="156.0" unFocusColor="#140f0f" />
+      <JFXButton layoutX="590.0" layoutY="120.0" onAction="#onaction_Add" prefHeight="35.0" prefWidth="150.0" stylesheets="@../css/Attendace_css.css" text="Add">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton1" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton layoutX="590.0" layoutY="173.0" onAction="#onaction_Update" prefHeight="35.0" prefWidth="150.0" stylesheets="@../css/Attendace_css.css" text="Update">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton1" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton layoutX="818.0" layoutY="119.0" onAction="#onaction_Details" prefHeight="35.0" prefWidth="150.0" stylesheets="@../css/Attendace_css.css" text="Details">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton3" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton layoutX="590.0" layoutY="229.0" onAction="#onaction_Delete" prefHeight="35.0" prefWidth="150.0" stylesheets="@../css/Attendace_css.css" text="Delete">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton1" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton layoutX="590.0" layoutY="286.0" onAction="#onaction_Clear" prefHeight="35.0" prefWidth="150.0" stylesheets="@../css/Attendace_css.css" text="Clear">
+         <styleClass>
+            <String fx:value="button1" />
+            <String fx:value="closebutton1" />
+         </styleClass>
+      </JFXButton>
+   </children>
+</AnchorPane>
